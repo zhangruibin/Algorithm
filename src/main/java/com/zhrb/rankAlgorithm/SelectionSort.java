@@ -46,7 +46,7 @@ public class SelectionSort {
         int random = 0;
         int temoCount = 0;
         for (int i = 0;i< arrayLength;i++){
-            random = Integer.parseInt((Math.random()*10+"").substring(0,(Math.random()*10+"").indexOf(".")));
+            random = (int) (Math.random()*arrayLength);
             if (random != oldArray[i]){
                 oldArray[temoCount] = random;
                 temoCount++;
@@ -56,13 +56,14 @@ public class SelectionSort {
         for(int num:oldArray){
             System.out.print(num+" ");
         }
+        System.out.println("\n_______________________________________________________");
         //生成了排序前的数组,下面开始使用选择排序进行数字的大小排序
         //声明一个z进行标志是第几轮排序,因为:
         // 第一轮把整个数组里面的最小值找到了放在了第一位,
         // 第二轮只需要找到除第一位之外后面的数组所存储的最小值,以此类推.
         int z = 0;
         //声明一个flag对循环排序次数进行存储
-        int flag = 1;
+        int flag = 0;
         // 做第i趟排序
         for(int i = 0; i < oldArray.length - 1; i++) {
             z = i;
@@ -80,21 +81,23 @@ public class SelectionSort {
                 oldArray[i] = oldArray[z];
                 oldArray[z] = temp;
             }
+            System.out.println("\n此趟排序,最小值为第"+(z+1)+"个位置上的"+oldArray[i]+"与第"+(i+1)+"个位置上的"+oldArray[z]+"交换位置>>");
             //else就是i=z的时候,这就是最后一轮,最后一轮里只剩下最大的数在队尾,所以不用操作
             //计数器加一
             flag++;
             //对每次排序所得到的结果进行遍历输出展示
-            System.out.println("\n经过第"+(i+1)+"次排序后的数组为:");
+            System.out.println("经过第"+(i+1)+"次排序后的数组为:");
             for(int num:oldArray){
                 System.out.print(num+" ");
             }
+            System.out.println("\n_______________________________________________________");
         }
         //存储到新数组中
         System.out.println("\n最终排序后的数组为:");
         for(int num:oldArray){
             System.out.print(num+" ");
         }
-        System.out.println("\n循环的次数为:"+flag+"次.");
+        System.out.println("\n循环排序的次数为:"+(flag)+"次.");
     }
     /*/**
     * @author zhangrui
