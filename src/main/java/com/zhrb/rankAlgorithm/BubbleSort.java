@@ -7,7 +7,7 @@ import com.zhrb.util.CreatAIntArray;
  */
 /*
 * @ClassName BubbleSort
-*@Description TODO 冒泡排序,JDK1.8中sort()
+*@Description TODO 冒泡排序,本节介绍两种写法,一种是从前到后遍历,一种是从后往前遍历
 *@Author zhangrui
 *@Date 16:45 16:45
 *@Version 
@@ -75,7 +75,7 @@ public class BubbleSort {
         }
         System.out.println("\n_______________________________________________________");
         System.out.println("第二种循环次数为:"+count2);
-        //循环次数为(偶数时),(N-1)+(N-2-1)+(N-4-1)+(N-6-1)+...+(N-2n+1)=nN-N²((N=n/2)+1);
+        //循环次数为(奇数时),(N-1)+(N-2-1)+(N-4-1)+(N-6-1)+...+(N-2n+1)=nN-N²((N=n/2)+1);
         //循环次数为(奇数时),(N-1)+(N-2-1)+(N-4-1)+(N-6-1)+...+(N-2n+1)=nN-N²(N=n/2);
         System.out.println("经过第二种排序后的数组为:");
         for(int num2:tempArray2){
