@@ -29,7 +29,7 @@ public class ShellSort {
         //每次循环,削减步长
         for (int increment = tempArray.length / 2; increment > 0; increment /=2) {
             for (int i = 0; i <tempArray.length-increment; i++) {
-                for (int j = i+increment;j<tempArray.length;j+=increment){
+                for (int j = i+increment;j<tempArray.length;j++){
                     if (tempArray[i] > tempArray[j]) {
                         int tempNum = tempArray[i];
                         tempArray[i] = tempArray[j];
