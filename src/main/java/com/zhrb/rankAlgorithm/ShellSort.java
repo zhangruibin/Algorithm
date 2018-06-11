@@ -28,8 +28,8 @@ public class ShellSort {
         System.out.println("生成的为排序前的数组为:"+ Arrays.toString(tempArray));
         //每次循环,削减步长
         for (int increment = tempArray.length / 2; increment > 0; increment /=2) {
-            for (int i = 0; i <tempArray.length-increment; i+=increment) {
-                for (int j = i+increment;j<tempArray.length;j++){
+            for (int i = 0; i <tempArray.length-increment; i++) {
+                for (int j = i+increment;j<tempArray.length;j+=increment){
                     if (tempArray[i] > tempArray[j]) {
                         int tempNum = tempArray[i];
                         tempArray[i] = tempArray[j];
