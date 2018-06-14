@@ -8,8 +8,8 @@ import java.util.Arrays;
  * Created by zhangrui on 2018/6/14.
  */
 /*
-* @ClassName BucketSort
-*@Description TODO 桶排序 1:先声明一排有序的空桶.
+* @ClassName CountingSort
+*@Description TODO 计数排序 1:先声明一排有序的空桶.
 * TODO 2:每个桶代表一个数字,然后对要排序的数组进行遍历,每遍历一个数,把这个数字放入到对应的桶里.
 * TODO 3:遍历完毕后,按序查桶即为排好顺序.
 * TODO 很重要的一点,怎样有效率的声明桶数量来代表的待排序数组最小值和最大值?
@@ -17,7 +17,7 @@ import java.util.Arrays;
 *@Date 14:38 14:38
 *@Version 
 * */
-public class BucketSort {
+public class CountingSort {
     public static void main(String[] args) {
         //创建一个随机的数组
         int [] tempArray = new CreatAIntArray().creatArrayLength();
