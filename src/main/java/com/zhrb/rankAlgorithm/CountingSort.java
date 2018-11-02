@@ -3,6 +3,7 @@ package com.zhrb.rankAlgorithm;
 import com.zhrb.util.CreatAIntArray;
 
 import java.util.Arrays;
+import java.util.Collection;
 
 /**
  * Created by zhangrui on 2018/6/14.
