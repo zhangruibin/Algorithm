@@ -51,6 +51,9 @@ public class StudyIntAndInteger {
                   if (x.startsWith("b1")){
                       super.println(x+"00");
                   }
+                  if (x.equals("hello world")){
+                      super.println("This is not the Hello world.");
+                  }
               }
             };
             System.setOut(printStream);
