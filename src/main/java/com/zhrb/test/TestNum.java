@@ -24,6 +24,7 @@ public class TestNum {
         System.out.println("--------------------------");
         test();
         test1();
+        test2();
     }
     public static void test(){
         String s = new String("1");
@@ -62,4 +63,13 @@ public class TestNum {
     *同理，test()方法s3是在堆中创建了两个"1"将两个"1"的存储合并起来定义为s3，然后在常量池中创建了一个"11"的值定义为s4.
     * 然后将在堆中的对象拷贝到常量池中，此时
     **/
+    public static void test2() {
+        int a = 2;
+        int v = ++a + ++a * ++a;
+        System.out.println(v);
+        System.out.println(0.0/0);
+        System.out.println(0/0.0);
+        System.out.println(0.0/0.0);
+        //System.out.println(0/0);
+    }
 }
