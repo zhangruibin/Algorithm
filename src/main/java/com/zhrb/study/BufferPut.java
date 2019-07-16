@@ -37,7 +37,7 @@ public class BufferPut {
 
         System.out.println("两种不同的buffer put方式的结果是否一致：");
         print(buffer,buffer2);
-
+        ByteBuffer buffer3 = ByteBuffer.allocateDirect(10);
     }
     private static void print(Buffer... buffers) {
         for (Buffer buffer : buffers) {
